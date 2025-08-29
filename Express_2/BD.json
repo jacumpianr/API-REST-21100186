@@ -1,0 +1,25 @@
+{
+    "Alumno": [
+        {
+            "id": 21100186,
+            "nombre": "Jose Alejandro",
+            "apellido": "Cumpian Ramos",
+            "edad": 22,
+            "carrera": "sistemas"
+        },
+        {
+            "id": 20100192,
+            "nombre": "Oscar David",
+            "apellido": "Espinosa Gomez",
+            "edad": 21,
+            "carrera": "sistemas"
+        },
+        {
+            "id": 21100182,
+            "nombre": "Alejandro",
+            "apellido": "Colín Ríos",
+            "edad": 22,
+            "carrera": "Sistemas Computacionales"
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+Codigos en bash
+
+inicializar el proyecto con:
+npm init
+
+i = install
+-D = dependencia de desarrollo(que no necesita eso para funcionar, solo en su desarollo)
+
+Se usara el modulo express, se puede usar como require("express")
+
+Codigo JS import express from 'express' para poder usarlo se agregar en el json   "type": "module"
+
+Si queremos que se hagan los cambios de manera inmediata sin la necesidad de apagar el servidor se instala la siguiente dependencia:
+npm i nodemon -D
+
+En el package.json en el apartado scripts se borra test y se remplaza con dev para la funcion de nodemon
+"dev": "nodemon index.js"
+
+Y ahora despues de nodemon debemos ejecutar en vez de node index.js se usara npm run dev
+
+En mi BD.json creamos una propiedad llamda Alumnos que sera un arreglo y la reprentacion de cada alumno es el objeto 

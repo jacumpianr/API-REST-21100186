@@ -1,0 +1,31 @@
+GET http://localhost:3000/Alumno HTTP/1.1
+
+###
+GET http://localhost:3000/Alumno/21100192 HTTP/1.1
+
+###
+POST http://localhost:3000/Alumno HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 20100182,
+    "nombre": "Alejandro",
+    "apellido": "Colin Rios",
+    "edad": 22,
+    "carrera": "Sistemas Computacionales"
+}
+
+###
+PUT http://localhost:3000/Alumno/20100182 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 21100182,
+    "nombre": "Alejandro",
+    "apellido": "Colín Ríos",
+    "edad": 22,
+    "carrera": "Sistemas Computacionales"
+}
+
+###
+DELETE http://localhost:3000/Alumno/20100201 HTTP/1.1

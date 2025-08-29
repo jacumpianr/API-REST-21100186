@@ -8,6 +8,7 @@ import bodyParser from "body-parser";
 // Creamos una constnte llamda app igual a la ejecucion express creando el objeto de la aplicacion
 // El objeto es app
 const app = express();
+// Se aplica antes de definir los endpoints para transformar las peticiones de http a json
 app.use(bodyParser.json());
 
 // creamos una funcion para leer los datos

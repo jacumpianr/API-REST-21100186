@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form target="respuesta" method="get" action="http://localhost:3000/clientes">
+    <button id="btnHTTP" type="submit"> Peticion FORM </button>
+    </form>
+
+    <iframe name="respuesta"></iframe>
+    <br>
+    
+    <!-- Peticion a Express con fetch de JavaScript -->
+    <!-- Las peticiones asincronas FETCH XML HTTP Request con Jquery Axions deben cumplir con SOP -->
+    <!-- ---------------------------------------------------------------------------------------- -->
+
+    <button id="btnJS"> Peticion </button>
+
+    <script>
+        document.getElementById('btnJS').addEventListener('click', () => {
+            fetch('http://localhost:3000/clientes')
+            .then(response => response.text())
+            .then(data => console.log(data))
+            .catch(error => console.log('Error en el fetch'));
+        })
+    </script>
+
+</body>
+</html>

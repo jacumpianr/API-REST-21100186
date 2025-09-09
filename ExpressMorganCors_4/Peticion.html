@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form target="respuesta" method="get" action="http://localhost:3000/clientes">
+    <form target="respuesta" method="get" action="http://localhost:4200/clientes">
     <button id="btnHTTP" type="submit"> Peticion FORM </button>
     </form>
 
@@ -22,7 +22,7 @@
 
     <script>
         document.getElementById('btnJS').addEventListener('click', () => {
-            fetch('http://localhost:3000/clientes')
+            fetch('http://localhost:4200/clientes')
             .then(response => response.text())
             .then(data => console.log(data))
             .catch(error => console.log('Error en el fetch'));

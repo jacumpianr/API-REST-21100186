@@ -1,0 +1,21 @@
+TABLE Artistas {
+    Id INT [PK, increment]
+    Nombre VARCHAR(100) [NOT NULL]
+    Nacionalidad VARCHAR(100)
+    FechaNacimientos DATE
+}
+TABLE Albumes {
+    Id INT [PK, increment]
+    Titulo VARCHAR(200) [NOT NULL]
+    FechaLanzamiento DATE
+    IdArtista INT [ref: > Artistas.Id]
+}
+
+TABLE Canciones {
+    Id INT [PK, increment]
+    Titulo NVARCHAR(200) [NOT NULL]
+    Duracion INT
+    Genero VARCHAR(100)
+    IdAlbum INT [ref: > Albumes.Id]
+    IdArtista INT [ref: > Artistas.Id]
+}

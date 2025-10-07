@@ -1,14 +1,14 @@
-CREATE DATABASE Musica 
-USE [Musica] 
+USE Musica;
+
 CREATE TABLE Artistas ( 
-    Id INT PRIMARY KEY IDENTITY(1,1), 
+    Id INT AUTO_INCREMENT PRIMARY KEY, 
     Nombre VARCHAR(100) NOT NULL, 
     Nacionalidad VARCHAR(100), 
     FechaNacimientos DATE 
 ); 
 
 CREATE TABLE Albumes ( 
-    Id INT PRIMARY KEY IDENTITY(1,1), 
+    Id INT AUTO_INCREMENT PRIMARY KEY, 
     Titulo VARCHAR(200) NOT NULL, 
     FechaLanzamiento DATE, 
     IdArtista INT, 
@@ -16,14 +16,17 @@ CREATE TABLE Albumes (
 ); 
 
 CREATE TABLE Canciones ( 
-    Id INT PRIMARY KEY IDENTITY(1,1), 
-    Titulo NVARCHAR(200) NOT NULL, 
-    Duracion INT, Genero VARCHAR(100), 
-    IdAlbum INT, IdArtista INT, 
+    Id INT AUTO_INCREMENT PRIMARY KEY, 
+    Titulo VARCHAR(200) NOT NULL, 
+    Duracion INT, 
+    Genero VARCHAR(100), 
+    IdAlbum INT, 
+    IdArtista INT, 
     FOREIGN KEY (IdAlbum) REFERENCES Albumes(Id), 
     FOREIGN KEY (IdArtista) REFERENCES Artistas(Id) 
 );
 
+-- Insertar datos
 INSERT INTO Artistas (Nombre, Nacionalidad, FechaNacimientos)
 VALUES ('Shakira', 'Colombia', '1977-02-02');
 
@@ -53,3 +56,4 @@ VALUES ('Adventure of a Lifetime', 250, 'Pop Rock', 2, 2);
 -- Álbum de The Beatles (IdAlbum = 3)
 INSERT INTO Canciones (Titulo, Duracion, Genero, IdAlbum, IdArtista)
 VALUES ('Come Together', 259, 'Rock', 3, 3);
+

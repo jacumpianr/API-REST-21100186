@@ -1,0 +1,4 @@
+nombre: "Servidor de Ejemplo"
+version: "1.0.0"
+autor: "Jose Alejandro"
+puerto: 3000

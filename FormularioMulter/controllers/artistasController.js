@@ -15,9 +15,22 @@ export const getArtistas = async (req, res) => {
 export const getArtistaById = async (req, res) => {
     try {
         const [rows] = await pool.query("SELECT * FROM Artistas WHERE Id = ?", [req.params.id]);
-        res.json(rows[0] || {});
+
+        if (rows.length === 0) {
+            return res.status(404).json({
+                message: `El artista con ID ${req.params.id} no existe o no fue encontrado.`
+            });
+        }
+
+        res.json({
+            data: rows[0]
+        });
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        res.status(500).json({
+            success: false,
+            error: "Error en el servidor",
+            details: err.message
+        });
     }
 };
 

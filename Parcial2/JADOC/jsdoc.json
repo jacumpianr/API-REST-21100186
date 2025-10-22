@@ -13,12 +13,37 @@
     },
     "templates": {
         "cleverLinks": false,
-        "monospaceLinks": false
+        "monospaceLinks": false,
+        "layoutFile": "node_modules/clean-jsdoc-theme/layout.tmpl"
     },
     "opts": {
         "destination": "./docs",
         "encoding": "utf8",
         "recurse": true,
-        "verbose": true
-    }
+        "verbose": true,
+        "template": "./node_modules/clean-jsdoc-theme"
+    },
+    "markdown": {
+        "hardwrap": false,
+        "idInHeadings": true
+    },
+            "cleantheme": {
+            "title": "API del Servidor Express",
+            "favicon": "https://nodejs.org/static/images/favicons/favicon.ico",
+            "theme": "dark", 
+            "search": true,
+            "collapse": true,
+            "sort": true,
+            "default_theme": "dark",
+            "meta": {
+                "title": "Documentación API Express",
+                "description": "Documentación generada automáticamente con clean-jsdoc-theme",
+                "keyword": "express, api, jsdoc"
+            },
+            "footer": "© 2025 Mi Proyecto - Generado con clean-jsdoc-theme",
+            "menu": [
+                { "title": "Inicio", "link": "index.html" },
+                { "title": "Repositorio", "link": "https://github.com/tuUsuario/tuRepo" }
+            ]
+        }
 }

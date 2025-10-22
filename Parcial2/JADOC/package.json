@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs": "jsdoc -c jsdoc.json",
-    "start": "node src/app.js"
+    "docs": "jsdoc -c jsdoc.json --readme ./README.md",
+    "start": "node src/app.js",
+    "generate-docs": "jsdoc --configure jsdoc.json --verbose"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +15,9 @@
   "dependencies": {
     "express": "^5.1.0",
     "jsdoc": "^4.0.5"
+  },
+  "devDependencies": {
+    "clean-jsdoc-theme": "^4.3.0",
+    "jsdoc-to-markdown": "^9.1.3"
   }
 }

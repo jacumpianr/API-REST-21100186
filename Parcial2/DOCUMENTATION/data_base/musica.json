@@ -1,0 +1,22 @@
+{
+    "Artistas": [
+        {
+            "id": 1,
+            "nombre": "Joan Sebastian",
+            "edad": 64,
+            "fecha_nacimiento": "08/04/1951"
+        },
+        {
+            "id": 2,
+            "nombre": "Romeo Santos",
+            "edad": 44,
+            "fecha_nacimiento": "21/07/1981"
+        },
+        {
+            "id": 3,
+            "nombre": "Michael Jackson",
+            "edad": 50,
+            "fecha_nacimiento": "29/08/1958"
+        }
+    ]
+}

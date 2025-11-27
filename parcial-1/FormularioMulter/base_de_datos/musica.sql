@@ -56,4 +56,3 @@ VALUES ('Adventure of a Lifetime', 250, 'Pop Rock', 2, 2);
 -- Álbum de The Beatles (IdAlbum = 3)
 INSERT INTO Canciones (Titulo, Duracion, Genero, IdAlbum, IdArtista)
 VALUES ('Come Together', 259, 'Rock', 3, 3);
-
